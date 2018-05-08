@@ -9,6 +9,8 @@
 
 <script>
     export default {
+        name: 'hello',
+
         data() {
             return {
                 increm: 0
@@ -17,7 +19,7 @@
 
         methods: {
             increment() {
-                this.increm += 1;
+                this.increm++;
             }
         }
     }

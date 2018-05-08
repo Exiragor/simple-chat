@@ -21,6 +21,7 @@ module.exports = {
   resolve: {
 		alias: {
 			jquery: path.resolve(context, 'node_modules/jquery/src/jquery.js'),
+			'@': path.resolve(context, 'src/js'),
 		},
   },
   
@@ -135,7 +136,8 @@ module.exports = {
 	devServer: {
 		contentBase: path.join(__dirname, "dev"),
 		compress: true,
-		port: 3000
+		port: 3000,
+        historyApiFallback: true,
 	},
 
 	plugins: [

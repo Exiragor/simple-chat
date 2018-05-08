@@ -22,6 +22,7 @@ module.exports = {
   resolve: {
 		alias: {
 			jquery: path.resolve(context, 'node_modules/jquery/src/jquery.js'),
+			'@': path.resolve(context, 'src/js'),
 		},
   },
   
@@ -132,9 +133,11 @@ module.exports = {
 	stats: {
 		colors: true,
 		modules: false,
-	},
+		errors: true,
+        warnings: false,
+    },
 
-	plugins: [
+    plugins: [
 		new CleanPlugin(['dist/'], {
 			root: context,
 			verbose: true,

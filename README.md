@@ -1,5 +1,5 @@
 # Simple chat
-Anonim chat based on vuejs.
+Simple chat based on vuejs.
 
 # Start
 npm i </br>
