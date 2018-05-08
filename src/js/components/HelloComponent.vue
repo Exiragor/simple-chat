@@ -1,8 +1,8 @@
 <template>
     <div class="row">
         <div class="col-md-12">
-            <h2>{{test}}</h2>
-            <button @click="plusCounter">+1</button>
+            <h2>{{ increm }}</h2>
+            <button @click="increment">+1</button>
         </div>
     </div>
 </template>
@@ -11,13 +11,13 @@
     export default {
         data() {
             return {
-                test: 0
+                increm: 0
             }
         },
 
         methods: {
-            plusCounter() {
-                this.test += 1;
+            increment() {
+                this.increm += 1;
             }
         }
     }
