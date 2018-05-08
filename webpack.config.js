@@ -1,6 +1,4 @@
 const path = require('path');
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
-const CleanPlugin = require('clean-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader')
 
 const context = path.resolve(__dirname);
@@ -134,27 +132,13 @@ module.exports = {
 		colors: true,
 		modules: false,
 	},
-	watch: true,
-	watchOptions: {
-		poll: 1000,
-		ignored: /node_modules/,
+	devServer: {
+		contentBase: path.join(__dirname, "dev"),
+		compress: true,
+		port: 3000
 	},
 
 	plugins: [
-		new CleanPlugin(['dev/'], {
-			root: context,
-			verbose: true,
-			dry: false,
-		}),
-		new BrowserSyncPlugin({
-			host: 'localhost',
-			port: 3000,
-			server: {
-				baseDir: 'dev',
-				directory: true,
-			},
-			startPath: '/index.html',
-		}),
 		new VueLoaderPlugin(),
 	],
 };

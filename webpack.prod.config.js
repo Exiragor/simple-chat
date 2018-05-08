@@ -1,7 +1,6 @@
 const path = require('path');
-const webpack = require('webpack');
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const CleanPlugin = require('clean-webpack-plugin');
+const { VueLoaderPlugin } = require('vue-loader')
 
 const context = path.resolve(__dirname);
 
@@ -119,18 +118,29 @@ module.exports = {
 						},
 					},
 				],
-			}
+			},
+			//vue loader 
+			{
+        test: /\.vue$/,
+        use: 'vue-loader'
+      }
     ]
 	},
 	
 	target: 'web',
-    stats: 'errors-only',
+
+	stats: {
+		colors: true,
+		modules: false,
+	},
 
 	plugins: [
 		new CleanPlugin(['dist/'], {
 			root: context,
 			verbose: true,
 			dry: false,
-        }),
+		}),
+
+		new VueLoaderPlugin(),
 	],
 };
