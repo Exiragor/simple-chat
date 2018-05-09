@@ -19,9 +19,12 @@
   },
   "homepage": "https://github.com/Exiragor/simple-chat#readme",
   "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.15",
     "autoprefixer": "^8.2.0",
     "babel-jest": "^22.4.3",
     "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
     "browser-sync": "^2.23.7",
     "browser-sync-webpack-plugin": "^2.2.2",
     "clean-webpack-plugin": "^0.1.19",
@@ -58,7 +61,7 @@
       "vue"
     ],
     "moduleNameMapper": {
-      "^@/(.*)$": "<rootDir>/src/$1"
+      "^@/(.*)$": "<rootDir>/src/js/$1"
     },
     "transform": {
       "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
@@ -66,7 +69,6 @@
     },
     "snapshotSerializers": [
       "<rootDir>/node_modules/jest-serializer-vue"
-    ],
-    "mapCoverage": true
+    ]
   }
 }
