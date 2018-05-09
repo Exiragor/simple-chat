@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-12">
             <ul>
-                <li :key="item" v-for="item in items">
+                <li @key="item" v-for="item in items">
                     {{ item }}
                 </li>
             </ul>
