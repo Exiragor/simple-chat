@@ -2,8 +2,6 @@
 @import "vars";
 @import "blocks/blocks";
 
-.square {
-    width: 100px;
-    height: 100px;
-    background-color: $black-color; 
+body {
+    background-color: $gray;
 }

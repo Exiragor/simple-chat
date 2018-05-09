@@ -1,16 +1,15 @@
 <template>
     <div class="my-content">
-        <incr-component />
-        <router-link to="/list">Go to List</router-link>
+        <chat />
     </div>
 </template>
 
 <script>
-    import IncrComponent from '@/components/Increment.vue'
+    import chat from '@/components/Chat.vue'
 
     export default {
         components: {
-            IncrComponent,
+            chat,
         }
     }
 </script>

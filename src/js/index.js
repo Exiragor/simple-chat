@@ -9,7 +9,7 @@ import router from './router/router';
 })();
 
 new Vue({
-  el: '#app',
-  router,
-  render: h => h(App)
+    el: '#app',
+    router,
+    render: h => h(App)
 })
