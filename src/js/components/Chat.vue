@@ -5,7 +5,7 @@
                 <div class="panel-body">
                     <div class="container">
                         <div class="row message-bubble" v-for="msg in messages">
-                            <p class="text-muted"><span v-bind:style="{color: msg.color}">{{ msg.author }}</span></p>
+                            <p class="text-muted"><span :style="{color: msg.color}">{{ msg.author }}</span></p>
                             <span>{{ msg.text }}</span>
                         </div>
                     </div>
