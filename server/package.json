@@ -1,0 +1,23 @@
+{
+  "name": "simple-chat-server",
+  "version": "0.0.1",
+  "description": "Server for simple chat",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Exiragor/simple-chat-server.git"
+  },
+  "author": "Alex",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Exiragor/simple-chat-server/issues"
+  },
+  "homepage": "https://github.com/Exiragor/simple-chat-server#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "socket.io": "^2.1.0"
+  }
+}
