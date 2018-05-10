@@ -54,7 +54,8 @@
     "popper.js": "^1.14.3",
     "socket.io-client": "^2.1.0",
     "vue": "^2.5.16",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
   },
   "jest": {
     "moduleFileExtensions": [
