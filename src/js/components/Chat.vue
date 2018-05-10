@@ -23,10 +23,7 @@
 </template>
 
 <script>
-    import io from 'socket.io-client';
     import { bus } from '@/bus'
-
-    const socket = io('http://localhost:4050');
 
     export default {
         name: 'chat',
