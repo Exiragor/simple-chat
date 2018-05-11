@@ -22,12 +22,6 @@
     export default {
         components: { HeaderComponent },
 
-        methods: {
-            sendMessage() {
-                socket.emit('message', { text: this.text, author: this.nickname.name, color: this.nickname.color });
-            }
-        },
-
         mounted() {
             let that = this;
             let nickname = this.$store.getters.nickname;
@@ -36,7 +30,7 @@
                 let name = 'Guest' + Date.now()
                 let color = '#6c757d'
 
-                this.$store.dispatch('changeNickName', {name, color});
+                this.$store.dispatch('changeNickName', { name, color });
             }
 
             // socket on message

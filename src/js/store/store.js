@@ -9,8 +9,10 @@ const store = new Vuex.Store({
         nickname: {name: '', color: ''},
     },
     actions: {
-        changeNickName({commit}, nickname) {
-            commit('CHANGE_NICKNAME', nickname)
+        changeNickName({commit, state}, nickname) {
+            let name = (nickname.name !== undefined) ? nickname.name : state.nickname.name
+            let color = (nickname.color !== undefined) ? nickname.color : state.nickname.color
+            commit('CHANGE_NICKNAME', { name, color })
         },
         addMessage({commit}, msg) {
             commit('ADD_MESSAGE', msg)
@@ -18,10 +20,8 @@ const store = new Vuex.Store({
     },
     mutations: {
         CHANGE_NICKNAME(state, nickname) {
-            let name = (nickname.name !== undefined) ? nickname.name : state.nickname.name
-            let color = (nickname.color !== undefined) ? nickname.color : state.nickname.color
-            state.nickname.name = name;
-            state.nickname.color = color;
+            state.nickname.name = nickname.name;
+            state.nickname.color = nickname.color;
         },
         ADD_MESSAGE(state, message) {
             state.messages.push(message)
