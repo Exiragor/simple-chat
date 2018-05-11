@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chat.vue matches snapshot 1`] = `
+<div class="row">
+  <div class="panel panel-default">
+    <div class="panel-heading">Chat</div>
+    <div class="panel-body">
+      <div class="container">
+        <div class="row message-bubble">
+          <p class="text-muted"><span style="color: rgb(255, 0, 0);">author 1</span></p> <span>text 1</span></div>
+        <div class="row message-bubble">
+          <p class="text-muted"><span style="color: rgb(255, 0, 0);">author 2</span></p> <span>text 2</span></div>
+      </div>
+      <div class="panel-footer">
+        <div class="input-group">
+          <input type="text" class="form-control"> <span class="input-group-btn"><button type="button" class="btn btn-default">Send</button></span></div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
