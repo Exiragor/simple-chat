@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nickname.vue matches snapshot 1`] = `
+<div class="row">
+  <div class="col-md-12">
+    <div class="form-group">
+      <label for="nick">Никнейм</label>
+      <input id="nick" type="text" class="form-control">
+      <label for="color">Цвет(hex: 6c757d)</label>
+      <input id="color" type="text" class="form-control">
+    </div>
+  </div>
+</div>
+`;
