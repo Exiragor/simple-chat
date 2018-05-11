@@ -36,8 +36,12 @@
 
         methods: {
             sendMessage() {
-                bus.$emit('sendMessage', { text: this.text, author: this.nickname.name, color: this.nickname.color });
-                this.text = "";
+                let msg = { text: this.text, author: this.nickname.name, color: this.nickname.color }
+
+                bus.$emit('sendMessage', msg)
+                this.$store.dispatch("addMessage", msg)
+
+                this.text = ""
             }
         },
 
